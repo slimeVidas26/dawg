@@ -23,9 +23,14 @@ $(function () {
     var loadBreedToSelect = function(s){
         $breedSelection = $('#ctr div select');
         for(var i in s){
-            $breedSelection.append(`
-            <option>${i}</option>
-            `)
+            $breedSelection.append(`<option>${i}</option>`);
+            if(s[i].length){
+                for(var ii=0; ii< s[i].length;ii++ ){
+                    console.log(i+'/'+s[i][ii]);
+                    $breedSelection.append(`<option value="${i}/${s[i][ii]}">&raquo;&nbsp;${s[i][ii]}</option>`);
+
+                }
+            }
 
         }
     }
@@ -40,18 +45,6 @@ $(function () {
             loadBreedToSelect(r.message);  
         })
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
