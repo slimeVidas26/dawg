@@ -12,14 +12,26 @@ h2 {
     margin-bottom:10px;
   }
 
-  pre{
+  .info{
     background: lightblue;
     overflow-y: scroll;
     height:200px;
 }
-img{
+.bold{
+    font-weight: bold;
+}
+.imgDog{
     width:85px;
 }
 p{
     text-align: center;
+}
+
+#ctr > .img {
+     display:none; 
+}
+
+
+#ctr > .img > img {
+    width:100%;
 }
